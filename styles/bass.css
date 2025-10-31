@@ -14,10 +14,12 @@ body {
     background-color: var(--primary);
     font-family: var(--main-font)
 }
-span{
+
+span {
     font-family: var(--decorative-font);
-    color:var(--accent)
+    color: var(--accent)
 }
+
 /*HEADER*/
 header {
     display: grid;
@@ -93,12 +95,12 @@ header span {
 h1 {
     margin-left: 10px;
     font-family: var(--heading-font);
-    color:var(--accent)
+    color: var(--accent)
 }
 
 h2 {
     font-family: var(--heading-font);
-    color:var(--accent)
+    color: var(--accent)
 }
 
 /* MAIN CONTENT LAYOUT */
@@ -119,6 +121,12 @@ main {
     padding: 20px;
     border-radius: 8px;
 }
+
+.about p,
+.about-text p {
+    color: var(--highlights);
+}
+
 
 .photo {
     background: var(--secondary);
@@ -181,6 +189,48 @@ main {
     margin: 0;
     color: var(--secondary);
     font-family: var(--heading-font);
+}
+
+.course-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Completed courses styling */
+.course-card.completed {
+    background: var(--highlights);
+    color: var(--secondary);
+    border: 2px solid var(--accent);
+}
+
+.course-card.completed h3 {
+    color: var(--secondary);
+}
+
+/* Incomplete courses styling */
+.course-card.incomplete {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px dashed #ccc;
+    opacity: 0.8;
+}
+
+.course-card.incomplete h3 {
+    color: #777;
+}
+
+/* Status styling */
+.course-card .status {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.course-card.completed .status {
+    color: var(--secondary);
+}
+
+.course-card.incomplete .status {
+    color: #888;
 }
 
 /* Hide filtered items */

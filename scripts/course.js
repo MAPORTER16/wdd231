@@ -77,3 +77,84 @@ const courses = [
         completed: false
     }
 ]
+
+function createCourseCard(course) {
+    // 1. Create a div element
+    const card = document.createElement('div');
+
+    // 2. Add CSS classes - what classes do you think you need?
+    card.className = `course-card ${course.completed ? 'completed' : 'incomplete'}`;
+    card.dataset.subject = course.subject.toLowerCase();
+
+    // 3. Set the inner HTML - what information should be displayed?
+    card.innerHTML = `
+        <h3>${course.subject} ${course.number}</h3>
+        <p><strong>${course.title}</strong></p>
+        <p>Credits: ${course.credits}</p>
+        <p class="status">${course.completed ? '✓ Completed' : '○ Not Completed'}</p>
+    `;
+
+    return card;
+}
+
+// Function to display courses
+function displayCourses(coursesToShow) {
+    const courseGrid = document.querySelector('.course-grid');
+    courseGrid.innerHTML = ''; // Clear existing cards
+
+    coursesToShow.forEach(course => {
+        const courseCard = createCourseCard(course);
+        courseGrid.appendChild(courseCard);
+    });
+
+    updateCreditTotal(coursesToShow);
+}
+
+// Function to update credit total using reduce
+function updateCreditTotal(coursesToShow) {
+    const totalCredits = coursesToShow.reduce((sum, course) => sum + course.credits, 0);
+    document.getElementById('total-credits').textContent = totalCredits;
+}
+
+// Function to filter courses
+function filterCourses(filter) {
+    let filteredCourses;
+
+    switch (filter) {
+        case 'cse':
+            filteredCourses = courses.filter(course => course.subject === 'CSE');
+            break;
+        case 'wdd':
+            filteredCourses = courses.filter(course => course.subject === 'WDD');
+            break;
+        case 'all':
+        default:
+            filteredCourses = courses;
+            break;
+    }
+
+    displayCourses(filteredCourses);
+}
+
+// Event listeners for filter buttons
+document.addEventListener('DOMContentLoaded', function () {
+    // Display all courses initially
+    displayCourses(courses);
+
+    // Add click event listeners to filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Filter courses based on data-filter attribute
+            const filter = this.dataset.filter;
+            filterCourses(filter);
+        });
+    });
+});
