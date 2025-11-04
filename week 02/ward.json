@@ -1,0 +1,23 @@
+{
+    "family-name": "The Bowers",
+    "move-in-date": "10-23-25",
+    "family-members": 3,
+    "visited": false,
+    "husband": {
+        "name": "Fred",
+        "gender": "male",
+        "Birthday": "05,2,1995"
+    },
+    
+    "Wife":{
+        "name": "Linda",
+        "gender": "female",
+        "Birthday": "03,22,1996"
+    },
+
+    "Child":{
+        "name": "Veronica",
+        "gender": "female",
+        "Birthcay": "05,3,2024"
+}
+}
