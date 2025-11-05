@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <script src="scripts/directory.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A list of businesses/orginizations in the area">
     <meta name="author" content="Matthew Porter">
-    
+
     <meta property="og:title" content="Directory">
     <meta property="og:description" content="A page where you can find organizations and local businesses.">
     <meta property="og:image" content="http://127.0.0.1:5500/chamber/images/logo.png.preview">
     <meta proptery="og:url" content="https://maporter16.github.io/wdd231/chamber/directory.html">
-    
+
     <link rel="icon" href="images/favicon.ico">
-    
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/directory.css" rel="stylesheet">
+
     <title>Directory</title>
 
 
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/logo.png" alt="site logo" width="800" height="800">
+        <span>Clinton Chamber of Commerce</span>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="current"><a href="#">Directory</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Join</a>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <h2>Business Directory</h2>
+            <p>Learn about our local businesses</p>
+        </section>
+
+        <section class="directory">
+            <div class="directory-header">
+                <h2 class="listings">Business Listings</h2>
+                <div class="view-toggle">
+                    <button id="grid-btn" class="toggle-btn active">📱 Grid</button>
+                    <button id="list-btn" class="toggle-btn">📋 List</button>
+                </div>
+            </div>
+            <div class="container grid-view">
+                <!-- Business cards will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Clinton Chamber of Commerce</p>
+                <p>📧 info@clintonchamber.com</p>
+                <p>📞 (801) 773-2666</p>
+                <p>📍 123 Main Street, Clinton, UT 84015</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+                <p>WDD 231 - Web Frontend Development</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

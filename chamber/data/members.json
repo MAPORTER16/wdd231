@@ -1,0 +1,127 @@
+{
+    "companies": [
+        {
+            "id": 1,
+            "name": "Pizza Pie Cafe",
+            "address": "1456 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 820-5214",
+            "website": "https://www.pizzapiecafe.com",
+            "image": "images/pizza.jpeg",
+            "category": "Restaurant",
+            "description": "Delicious pizza for the whole family",
+            "membershipLevel": 2,
+            "yearEstablished": 1988,
+            "services": [
+                "Dine-in",
+                "Takeout",
+                "Catering"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Fat Cats",
+            "address": "1200 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 416-2334",
+            "website": "https://www.fatcats.com",
+            "image": "images/fatcats.jpeg",
+            "category": "Entertainment",
+            "description": "Fun and games like bowling, laser tag, and a theater!",
+            "membershipLevel": 3,
+            "yearEstablished": 2001,
+            "services": [
+                "Bowling",
+                "Laser Tag",
+                "Movie Theater",
+                "Arcade"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "UPS Store",
+            "address": "1355 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 774-9492",
+            "website": "https://www.theupsstore.com",
+            "image": "images/ups.jpeg",
+            "category": "Service",
+            "description": "UPS is ready to handle your packages with care and efficiency.",
+            "membershipLevel": 1,
+            "yearEstablished": 1980,
+            "services": [
+                "Shipping",
+                "Printing",
+                "Mailbox Rental",
+                "Packing"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Discount Tires",
+            "address": "1789 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 896-2355",
+            "website": "https://www.discounttire.com",
+            "image": "images/discount.jpeg",
+            "category": "Service",
+            "description": "Good tire prices and friendly service",
+            "membershipLevel": 2,
+            "yearEstablished": 1960,
+            "services": [
+                "Tire Installation",
+                "Tire Repair",
+                "Wheel Alignment",
+                "Balancing"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Jersey Mike's",
+            "address": "1234 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 820-5194",
+            "website": "https://www.jerseymikes.com",
+            "image": "images/jersey.png",
+            "category": "Food",
+            "description": "Delicious sandwiches and incredible service",
+            "membershipLevel": 3,
+            "yearEstablished": 1956,
+            "services": [
+                "Dine-in",
+                "Takeout",
+                "Delivery",
+                "Catering"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Tony Burgers",
+            "address": "1567 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 987-8309",
+            "website": "https://www.tonyburgers.com",
+            "image": "images/tony.jpeg",
+            "category": "Food",
+            "description": "Delicious burgers for all to enjoy",
+            "membershipLevel": 1,
+            "yearEstablished": 1985,
+            "services": [
+                "Dine-in",
+                "Takeout",
+                "Drive-through"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Great Harvest Bread Co.",
+            "address": "1890 N 2000 W, Clinton, UT 84015",
+            "phone": "(801) 773-5459",
+            "website": "https://www.greatharvest.com",
+            "image": "images/bread.jpeg",
+            "category": "Food",
+            "description": "Bakery chain specializing in whole-grain breads & muffins made with Montana wheat",
+            "membershipLevel": 2,
+            "yearEstablished": 1976,
+            "services": [
+                "Fresh Baked Goods",
+                "Custom Cakes",
+                "Catering"
+            ]
+        }
+    ]
+}
