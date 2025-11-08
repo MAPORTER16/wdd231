@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 main {
@@ -117,9 +117,10 @@ header span {
     background-color: #ecf0f1;
 }
 
-.hero h2 {
+.hero h1 {
     margin-bottom: 0.5rem;
     color: #2c3e50;
+    font-weight: 600;
 }
 
 .directory {
