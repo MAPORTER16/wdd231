@@ -1,6 +1,15 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=41.1391&lon=-112.0505&units=imperial&appid=b16b5d69f3e3b4d14be463994094ce8c'
 const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=41.1391&lon=-112.0505&units=imperial&appid=b16b5d69f3e3b4d14be463994094ce8c';
 
+// Hamburger Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav-bar');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
 async function getWeather() {
     try {
         const response = await fetch(url);
