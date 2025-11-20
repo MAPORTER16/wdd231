@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You - Clinton Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="site logo" width="60" height="60">
+        <span>Clinton Chamber of Commerce</span>
+    </header>
+
+    <main>
+        <section class="thankyou" style="max-width:900px;margin:2rem auto;padding:1rem;">
+            <h1>Thank you for joining!</h1>
+            <p>We appreciate your application. Below is the information you submitted for required fields.</p>
+
+            <dl id="submitted-info"
+                style="background:#fff;padding:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.06);">
+                <div>
+                    <dt>First Name</dt>
+                    <dd id="first"></dd>
+                </div>
+                <div>
+                    <dt>Last Name</dt>
+                    <dd id="last"></dd>
+                </div>
+                <div>
+                    <dt>Email</dt>
+                    <dd id="email"></dd>
+                </div>
+                <div>
+                    <dt>Phone Number</dt>
+                    <dd id="phone"></dd>
+                </div>
+                <div>
+                    <dt>Business</dt>
+                    <dd id="business"></dd>
+                </div>
+                <div>
+                    <dt>Submitted At</dt>
+                    <dd id="submitted-at"></dd>
+                </div>
+            </dl>
+
+            <p style="margin-top:1rem;"><a href="join.html">Return to join form</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Clinton Chamber of Commerce</p>
+                <p>📧 info@clintonchamber.com</p>
+                <p>📞 (801) 773-2666</p>
+                <p>📍 123 Main Street, Clinton, UT 84015</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+                <p>WDD 231 - Web Frontend Development</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Helper to read query params safely
+        function getParam(name) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name) || '';
+        }
+
+        // Map cleaned input names from the form
+        document.getElementById('first').textContent = getParam('first') || '(not provided)';
+        document.getElementById('last').textContent = getParam('last') || '(not provided)';
+        document.getElementById('email').textContent = getParam('email') || '(not provided)';
+        document.getElementById('phone').textContent = getParam('phone') || '(not provided)';
+        document.getElementById('business').textContent = getParam('business') || '(not provided)';
+        var ts = getParam('form-timestamp');
+        if (ts) {
+            var parsed = Date.parse(ts);
+            if (!isNaN(parsed)) {
+                document.getElementById('submitted-at').textContent = new Date(parsed).toLocaleString();
+            } else {
+                document.getElementById('submitted-at').textContent = ts;
+            }
+        } else {
+            document.getElementById('submitted-at').textContent = '(not provided)';
+        }
+
+        // fill footer year and last-modified
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

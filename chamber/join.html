@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the join page for the clinton city of commerce.">
+    <meta name="Author" content="Matthew Porter">
+
+    <meta property="og:title" content="Join Page- Clinton Chamber of Commerce">
+    <meta property="og:description"
+        content="Welcome to the Join pager where you can sign up and be apart of the chamber of commerce.">
+    <meta property="og:image" content="https://maporter16.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://maporter16.github.io/wdd231/chamber/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/join.css" rel="stylesheet">
+    <script src="scripts/join.js" defer></script>
+
+    <title>Join Page - Clinton Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="site logo" width="800" height="800">
+        <span>Clinton Chamber of Commerce</span>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Join</a></li>
+        </ul>
+    </nav>
+
+
+
+    <main>
+        <h1>Sign Up Now!</h1>
+        <div class="join-grid">
+            <form method="GET" action="thankyou.html" class="formOne" id="join-form" novalidate>
+                <div class="form-row">
+                    <label for="first">First Name <span aria-hidden="true">*</span></label>
+                    <input id="first" name="first" type="text" autocomplete="given-name" required
+                        aria-required="true" />
+                </div>
+
+                <div class="form-row">
+                    <label for="last">Last Name <span aria-hidden="true">*</span></label>
+                    <input id="last" name="last" type="text" autocomplete="family-name" required aria-required="true" />
+                </div>
+
+                <div class="form-row">
+                    <label for="title">Organizational Title</label>
+                    <input id="title" name="title" type="text" autocomplete="organization-title" />
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email"
+                        required aria-required="true" />
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required
+                        aria-required="true" />
+                </div>
+
+                <div class="form-row">
+                    <label for="business">Organization / Business <span aria-hidden="true">*</span></label>
+                    <input id="business" name="business" type="text" autocomplete="organization" required
+                        aria-required="true" />
+                </div>
+
+                <fieldset class="form-fieldset">
+                    <legend>Membership Level</legend>
+                    <label><input type="radio" name="membership" value="non-profit" checked> Non-Profit (no fee)</label>
+                    <label><input type="radio" name="membership" value="bronze"> Bronze</label>
+                    <label><input type="radio" name="membership" value="silver"> Silver</label>
+                    <label><input type="radio" name="membership" value="gold"> Gold</label>
+                </fieldset>
+
+                <div class="form-row">
+                    <label for="orgDescription">Organization Description</label>
+                    <textarea id="orgDescription" name="orgDescription" rows="5"></textarea>
+                </div>
+
+                <!--Hidden Time Stamp-->
+                <input type="hidden" name="form-timestamp" id="form-timestamp">
+
+                <div class="form-actions">
+                    <button type="submit" class="primary">Apply</button>
+                </div>
+
+            </form>
+
+            <!-- Membership cards (will appear below form on small screens, right on large) -->
+            <aside class="membership-cards" aria-label="Membership levels">
+                <h2 class="visually-hidden">Membership Levels</h2>
+                <ul class="cards-list">
+                    <li class="card" data-animate-delay="0">
+                        <h3>Non-Profit</h3>
+                        <p>Free membership for qualifying non-profit organizations.</p>
+                        <button class="info-btn" data-modal="modal-nonprofit">More info</button>
+                    </li>
+                    <li class="card" data-animate-delay="120">
+                        <h3>Bronze</h3>
+                        <p>Basic listing, event notices, and community support.</p>
+                        <button class="info-btn" data-modal="modal-bronze">More info</button>
+                    </li>
+                    <li class="card" data-animate-delay="240">
+                        <h3>Silver</h3>
+                        <p>Includes Bronze benefits plus discounted event fees and limited advertising.</p>
+                        <button class="info-btn" data-modal="modal-silver">More info</button>
+                    </li>
+                    <li class="card" data-animate-delay="360">
+                        <h3>Gold</h3>
+                        <p>All benefits plus priority advertising and special event access.</p>
+                        <button class="info-btn" data-modal="modal-gold">More info</button>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Modals for membership details -->
+        <div class="modals">
+            <div id="modal-nonprofit" class="modal" role="dialog" aria-modal="true" aria-hidden="true"
+                aria-labelledby="nonprofit-title">
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close details">×</button>
+                    <h3 id="nonprofit-title">Non-Profit Membership — Free</h3>
+                    <p>Designed for registered non-profit organizations. Benefits include event notifications, listings
+                        in our directory, and eligibility for community grants and volunteer networking.</p>
+                </div>
+            </div>
+
+            <div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-hidden="true"
+                aria-labelledby="bronze-title">
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close details">×</button>
+                    <h3 id="bronze-title">Bronze Membership — Entry Level</h3>
+                    <p>Includes a directory listing, event notices, and invitations to community mixers.</p>
+                </div>
+            </div>
+
+            <div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-hidden="true"
+                aria-labelledby="silver-title">
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close details">×</button>
+                    <h3 id="silver-title">Silver Membership — Enhanced</h3>
+                    <p>Everything in Bronze plus advertising spots, training sessions, and event discounts.</p>
+                </div>
+            </div>
+
+            <div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-hidden="true"
+                aria-labelledby="gold-title">
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close details">×</button>
+                    <h3 id="gold-title">Gold Membership — Premium</h3>
+                    <p>All Silver benefits plus priority homepage spotlight advertising, invitation-only events, and
+                        sponsor opportunities.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Clinton Chamber of Commerce</p>
+            <p>📧 info@clintonchamber.com</p>
+            <p>📞 (801) 773-2666</p>
+            <p>📍 123 Main Street, Clinton, UT 84015</p>
+        </div>
+        <div class="development-info">
+            <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+            <p>WDD 231 - Web Frontend Development</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </div>
+</footer>
+
+</html>

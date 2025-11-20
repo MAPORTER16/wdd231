@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "wdd231",
+			"path": "../.."
+		},
+		{
+			"name": "startLab",
+			"path": "../../../../../Downloads/startLab"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "wdd231"
+	}
+}
