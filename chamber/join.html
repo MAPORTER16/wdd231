@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to the join page for the clinton city of commerce.">
-    <meta name="Author" content="Matthew Porter">
+    <meta name="author" content="Matthew Porter">
 
     <meta property="og:title" content="Join Page- Clinton Chamber of Commerce">
-    <meta property="og:description"
-        content="Welcome to the Join pager where you can sign up and be apart of the chamber of commerce.">
+    <meta property="og:description"  content="Welcome to the Join pager where you can sign up and be apart of the chamber of commerce.">
     <meta property="og:image" content="https://maporter16.github.io/wdd231/chamber/images/logo.png">
     <meta property="og:url" content="https://maporter16.github.io/wdd231/chamber/index.html">
-    <meta propterty="og:author" content="Matthew Porter">
+    <meta property="og:author" content="Matthew Porter">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -60,11 +59,11 @@
                 </div>
 
                 <div class="form-row">
-                    <label for="title">Organizational Title</label> <input id="title" name="title" type="text" autocomplete="organization-title" pattern="^[A-Za-z\-\s]{2,}$" title="Enter your organization title (letters, spaces, hyphens; min 2 characters)" />
+                    <label for="title">Organizational Title</label> <input id="title" name="title" type="text" autocomplete="organization-title" pattern="^[A-Za-z\-\s]{7,}$" title="Enter your organization title (letters, spaces, hyphens; min 2 characters)" />
                 </div>
 
                 <div class="form-row">
-                    <label for="email">Email <span aria-hidden="true">*</span></label> <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email"required aria-required="true" title="Your email address" />
+                    <label for="email">Email <span aria-hidden="true">*</span></label> <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required aria-required="true" title="Your email address" />
                 </div>
 
                 <div class="form-row">
@@ -75,7 +74,7 @@
                     <label for="business">Organization / Business <span aria-hidden="true">*</span></label> <input id="business" name="business" type="text" autocomplete="organization" required aria-required="true" title="Your organization or business name" />
                 </div>
 
-                <fieldset class="form-fieldset" aria-required="true">
+                <fieldset class="form-fieldset" required="true">
                     <legend>Membership Level</legend>
                     <label><input type="radio" name="membership" value="np" checked required title="Non-profit membership (no fee)"> Non-Profit (no fee)</label>
                    
