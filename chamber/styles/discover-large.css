@@ -1,0 +1,30 @@
+/* Large Screen Styles (1025px and above) */
+
+@media (min-width: 1025px) {
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header span {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+    .discover-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+        gap: 2rem;
+    }
+}
