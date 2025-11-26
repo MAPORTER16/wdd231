@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the discover page where you can learn more about Clinton.">
+    <meta name="Author" content="Matthew Porter">
+
+    <meta property="og:title" content="Discover - Clinton Chamber of Commerce">
+    <meta property="og:description"
+        content="Welcome to the discover page where you can learn more about the city of Clinton.">
+    <meta property="og:image" content="https://maporter16.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://maporter16.github.io/wdd231/chamber/discover.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/discover.css" rel="stylesheet">
+    <script src="scripts/discover.js" defer></script>
+
+    <title>Discovery Page - Clinton Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="site logo" width="800" height="800">
+        <span>Clinton Chamber of Commerce</span>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="visitor-message" class="visitor-message"></div>
+
+        <section class="discover-gallery">
+            <div class="attraction-card" style="grid-area: card1">
+                <h2>Antelope Island State Park</h2>
+                <figure>
+                    <img src="images/antelope.webp" alt="Antelope Island with bison and wildlife" loading="lazy">
+                </figure>
+                <address>4528 W 1700 S, Syracuse, UT 84075</address>
+                <p>A stunning natural wonder featuring free-roaming bison and antelope herds, scenic hiking trails, and
+                    breathtaking views of the Great Salt Lake. Perfect for wildlife viewing and outdoor adventures.</p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card2">
+                <h2>Hill Aerospace Museum</h2>
+                <figure>
+                    <img src="images/airplane.webp" alt="Historic military aircraft on display" loading="lazy">
+                </figure>
+                <address>7961 Wardleigh Rd, Hill AFB, UT 84056</address>
+                <p>Explore an impressive collection of historic aircraft and military artifacts. This free museum
+                    showcases over 90 aircraft and missiles, offering a fascinating journey through aviation history.
+                </p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card3">
+                <h2>Great Salt Lake Marina</h2>
+                <figure>
+                    <img src="images/crane.webp" alt="Marina at Great Salt Lake with boats" loading="lazy">
+                </figure>
+                <address>13312 W Frontage Rd, Syracuse, UT 84075</address>
+                <p>A premier waterfront destination for boating, sailing, and water recreation. Enjoy spectacular
+                    sunsets and unique perspectives of the Great Salt Lake's famous pink waters.</p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card4">
+                <h2>Layton Hills Mall</h2>
+                <figure>
+                    <img src="images/layton.webp" alt="Modern shopping mall interior" loading="lazy">
+                </figure>
+                <address>1201 N Hill Field Rd, Layton, UT 84041</address>
+                <p>The premier shopping destination in Davis County, featuring over 100 stores, diverse dining options,
+                    and entertainment venues. A perfect blend of retail therapy and family fun.</p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card5">
+                <h2>Rush Funplex</h2>
+                <figure>
+                    <img src="images/rush.webp" alt="Family entertainment center activities" loading="lazy">
+                </figure>
+                <address>2341 S 1200 W, Syracuse, UT 84075</address>
+                <p>Northern Utah's ultimate family entertainment center with arcade games, go-karts, laser tag, mini
+                    golf, and bowling. Create unforgettable memories with friends and family.</p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card6">
+                <h2>Farmington Bay Waterfowl Management Area</h2>
+                <figure>
+                    <img src="images/sea.webp" alt="Birds and wetlands at Farmington Bay" loading="lazy">
+                </figure>
+                <address>Glover Ln, Farmington, UT 84025</address>
+                <p>A paradise for bird watchers and nature photographers, featuring diverse wetland habitats. Experience
+                    thousands of migratory birds and stunning natural scenery year-round.</p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card7">
+                <h2>Great Salt Lake Shorelands Preserve</h2>
+                <figure>
+                    <img src="images/shore.webp" alt="Shoreline preserve landscape" loading="lazy">
+                </figure>
+                <address>1485 W 3000 S, Syracuse, UT 84075</address>
+                <p>A pristine natural preserve protecting critical wetland habitat along the Great Salt Lake shoreline.
+                    Discover unique ecosystems and enjoy peaceful nature walks.</p>
+            </div>
+
+            <div class="attraction-card" style="grid-area: card8">
+                <h2>Snowbasin Resort</h2>
+                <figure>
+                    <img src="images/snow.webp" alt="Snow-covered ski slopes and mountain views" loading="lazy">
+                </figure>
+                <address>3925 E Snowbasin Rd, Huntsville, UT 84317</address>
+                <p>World-class ski resort offering exceptional powder skiing, scenic mountain views, and year-round
+                    outdoor recreation. Experience the thrill of Olympic-quality slopes and trails.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Clinton Chamber of Commerce</p>
+                <p>📧 info@clintonchamber.com</p>
+                <p>📞 (801) 773-2666</p>
+                <p>📍 123 Main Street, Clinton, UT 84015</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+                <p>WDD 231 - Web Frontend Development</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
