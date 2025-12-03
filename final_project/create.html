@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create and save custom Elden Ring character builds">
+    <meta name="author" content="Matthew Porter">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Elden Builds - Build Creator">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Create and customize your perfect Elden Ring character build with our interactive tool.">
+    <meta property="og:image" content="images/elden.webp">
+    <meta property="og:url" content="https://maporter16.github.io/wdd231/final_project/create.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/elden.css" rel="stylesheet">
+    <link href="styles/create.css" rel="stylesheet">
+    <script src="scripts/create.js" type="module" defer></script>
+
+    <title>Create Build - Elden Builds</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/elden.webp" alt="site logo" width="800" height="800" loading="lazy">
+        <span>Elden Builds</span>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="create.html">Create Build</a></li>
+            <li><a href="item.html">Item Stats</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Build Creator</h1>
+
+        <div class="build-controls">
+            <input type="text" id="build-name" placeholder="Build Name (e.g., Strength Faith Paladin)">
+            <button id="save-build" class="btn-primary">Save Build</button>
+            <button id="load-build" class="btn-secondary">Load Build</button>
+            <button id="clear-build" class="btn-danger">Clear Build</button>
+        </div>
+
+        <div class="saved-builds">
+            <h3>Saved Builds:</h3>
+            <div id="saved-builds-list"></div>
+        </div>
+
+        <div class="character-sheet">
+            <!-- Weapon Slots -->
+            <section class="equipment-section">
+                <h2>Weapons</h2>
+                <div class="weapon-slots">
+                    <div class="equipment-slot" data-slot="right-hand-1">
+                        <h3>Right Hand 1</h3>
+                        <button class="select-item" data-category="weapons" data-slot="right-hand-1">Select
+                            Weapon</button>
+                        <div class="selected-item" id="right-hand-1"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="right-hand-2">
+                        <h3>Right Hand 2</h3>
+                        <button class="select-item" data-category="weapons" data-slot="right-hand-2">Select
+                            Weapon</button>
+                        <div class="selected-item" id="right-hand-2"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="left-hand-1">
+                        <h3>Left Hand 1</h3>
+                        <button class="select-item" data-category="weapons" data-slot="left-hand-1">Select
+                            Weapon/Shield</button>
+                        <div class="selected-item" id="left-hand-1"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="left-hand-2">
+                        <h3>Left Hand 2</h3>
+                        <button class="select-item" data-category="weapons" data-slot="left-hand-2">Select
+                            Weapon/Shield</button>
+                        <div class="selected-item" id="left-hand-2"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Armor Slots -->
+            <section class="equipment-section">
+                <h2>Armor</h2>
+                <div class="armor-slots">
+                    <div class="equipment-slot" data-slot="head">
+                        <h3>Head</h3>
+                        <button class="select-item" data-category="armors" data-slot="head">Select Helmet</button>
+                        <div class="selected-item" id="head"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="chest">
+                        <h3>Chest</h3>
+                        <button class="select-item" data-category="armors" data-slot="chest">Select Chest Armor</button>
+                        <div class="selected-item" id="chest"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="arms">
+                        <h3>Arms</h3>
+                        <button class="select-item" data-category="armors" data-slot="arms">Select Gauntlets</button>
+                        <div class="selected-item" id="arms"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="legs">
+                        <h3>Legs</h3>
+                        <button class="select-item" data-category="armors" data-slot="legs">Select Leg Armor</button>
+                        <div class="selected-item" id="legs"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Talisman Slots -->
+            <section class="equipment-section">
+                <h2>Talismans</h2>
+                <div class="talisman-slots">
+                    <div class="equipment-slot" data-slot="talisman-1">
+                        <h3>Talisman 1</h3>
+                        <button class="select-item" data-category="talismans" data-slot="talisman-1">Select
+                            Talisman</button>
+                        <div class="selected-item" id="talisman-1"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="talisman-2">
+                        <h3>Talisman 2</h3>
+                        <button class="select-item" data-category="talismans" data-slot="talisman-2">Select
+                            Talisman</button>
+                        <div class="selected-item" id="talisman-2"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="talisman-3">
+                        <h3>Talisman 3</h3>
+                        <button class="select-item" data-category="talismans" data-slot="talisman-3">Select
+                            Talisman</button>
+                        <div class="selected-item" id="talisman-3"></div>
+                    </div>
+                    <div class="equipment-slot" data-slot="talisman-4">
+                        <h3>Talisman 4</h3>
+                        <button class="select-item" data-category="talismans" data-slot="talisman-4">Select
+                            Talisman</button>
+                        <div class="selected-item" id="talisman-4"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Build Stats Summary -->
+            <section class="stats-summary">
+                <h2>Build Summary</h2>
+                <div class="stat-display">
+                    <p><strong>Total Equipment Load:</strong> <span id="total-weight">0.0</span></p>
+                    <p><strong>Required Strength:</strong> <span id="req-str">0</span></p>
+                    <p><strong>Required Dexterity:</strong> <span id="req-dex">0</span></p>
+                    <p><strong>Required Intelligence:</strong> <span id="req-int">0</span></p>
+                    <p><strong>Required Faith:</strong> <span id="req-fai">0</span></p>
+                    <p><strong>Required Arcane:</strong> <span id="req-arc">0</span></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Item Selection Modal -->
+        <dialog id="item-selector">
+            <div class="modal-header">
+                <h2>Select Item</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="item-search" placeholder="Search items...">
+                <div id="item-list" class="item-grid"></div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Elden Builds</p>
+                <p>📧 info: EldenBuilds@gmail.com</p>
+                <p>📞 (786)-087-9934</p>
+                <p>📍 450 Main Street, Limgrave, LB 7892</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+                <p>WDD 231 - Web Frontend Development</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

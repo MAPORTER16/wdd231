@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Home page for Elden Builds, Where you can find info about the website and how it works.">
+    <meta name="author" content="Matthew Porter">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Elden Builds - Home">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Your ultimate companion for creating and experimenting with Elden Ring character builds.">
+    <meta property="og:image" content="images/elden.webp">
+    <meta property="og:url" content="https://maporter16.github.io/wdd231/final_project/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/elden.css" rel="stylesheet">
+    <script src="scripts/elden.js" defer></script>
+
+
+    <title>Home Page for Elden Builds</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/elden.webp" alt="site logo" width="800" height="800" loading="lazy">
+        <span>Elden Builds</span>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="create.html">Create Build</a></li>
+            <li><a href="item.html">Item Stats</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Elden Builds</h1>
+            <p>Your ultimate companion for creating and experimenting with Elden Ring character builds</p>
+        </section>
+
+        <section class="about">
+            <h2>What is Elden Builds?</h2>
+            <p>Elden Builds is a comprehensive tool designed to help you plan, create, and optimize your character
+                builds for Elden Ring. Whether you're a seasoned Tarnished or just beginning your journey in the Lands
+                Between, our platform provides all the tools you need to experiment with different builds before
+                committing your precious runes.</p>
+        </section>
+
+        <section class="features">
+            <h2>How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>1. Explore Items</h3>
+                    <p>Browse our comprehensive database of weapons, armor, talismans, sorceries, and incantations. View
+                        detailed stats, requirements, and effects for every item in the game.</p>
+                </div>
+                <div class="feature">
+                    <h3>2. Create Your Build</h3>
+                    <p>Use our character sheet interface to select weapons, armor pieces, talismans, and spells. See
+                        real-time stat calculations and equipment requirements as you build.</p>
+                </div>
+                <div class="feature">
+                    <h3>3. Save & Compare</h3>
+                    <p>Save multiple builds and switch between them instantly. Compare different loadouts to find the
+                        perfect combination for your playstyle.</p>
+                </div>
+                <div class="feature">
+                    <h3>4. Optimize</h3>
+                    <p>View total weight, damage output, defense stats, and attribute requirements. Ensure your build is
+                        optimized before you invest in-game.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="get-started">
+            <h2>Ready to Begin?</h2>
+            <p>Start creating your perfect Elden Ring build today!</p>
+            <div class="cta-buttons">
+                <a href="create.html" class="btn-primary">Create a Build</a>
+                <a href="item.html" class="btn-secondary">Explore Items</a>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>Why Use Elden Builds?</h2>
+            <ul>
+                <li><strong>Save Time:</strong> Test builds before spending runes and upgrade materials in-game</li>
+                <li><strong>Plan Ahead:</strong> Know exactly what stats you need and where to find each item</li>
+                <li><strong>Experiment Freely:</strong> Try different combinations without consequences</li>
+                <li><strong>Stay Organized:</strong> Keep all your favorite builds in one place</li>
+                <li><strong>Always Updated:</strong> Access the latest item data from the Elden Ring API</li>
+            </ul>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Get in Touch</h2>
+            <p>Have feedback or suggestions? We'd love to hear from you!</p>
+            <form id="contact-form" action="thank-you.html" method="get">
+                <div class="form-group">
+                    <label for="name">Name: <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message-type">Message Type:</label>
+                    <select id="message-type" name="messageType">
+                        <option value="feedback">Feedback</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message: <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="subscribe" value="yes">
+                        Subscribe to updates about new features
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Elden Builds</p>
+            <p>📧 info: EldenBuilds@gmail.com</p>
+            <p>📞 (786)-087-9934</p>
+            <p>📍 450 Main Street, Limgrave, LB 7892</p>
+        </div>
+        <div class="development-info">
+            <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+            <p>WDD 231 - Web Frontend Development</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </div>
+
+
+
+
+</footer>
+
+</html>

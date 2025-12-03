@@ -1,0 +1,292 @@
+/* Build Creator Page Specific Styles */
+
+.build-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--highlight-color);
+    border-radius: 8px;
+}
+
+#build-name {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Saved Builds Section */
+.saved-builds {
+    background-color: var(--highlight-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: none;
+}
+
+.saved-builds.show {
+    display: block;
+}
+
+#saved-builds-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.saved-build-card {
+    background-color: var(--accent-color);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--header-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.saved-build-card h4 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.saved-build-card button {
+    width: 100%;
+}
+
+/* Character Sheet Styles */
+.character-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.equipment-section {
+    background-color: var(--highlight-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.equipment-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.weapon-slots,
+.armor-slots,
+.talisman-slots {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.equipment-slot {
+    background-color: var(--accent-color);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid var(--header-color);
+    overflow: hidden;
+}
+
+.equipment-slot h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.select-item {
+    width: 100%;
+    background-color: var(--header-color);
+    color: var(--background-color);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Cinzel", serif;
+    transition: all 0.3s ease;
+}
+
+.select-item:hover {
+    background-color: var(--text-color);
+}
+
+.selected-item {
+    margin-top: 1rem;
+}
+
+.item-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--highlight-color);
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.item-display img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    align-self: center;
+}
+
+.item-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--header-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.item-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.remove-item {
+    background-color: var(--error-color);
+    color: var(--light-text);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    background-color: #cc0000;
+}
+
+/* Stats Summary */
+.stats-summary {
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    padding: 2rem;
+    border: 3px solid var(--header-color);
+}
+
+.stats-summary h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stat-display p {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-display span {
+    color: var(--header-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Item Selection Modal Specific Styles */
+.item-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-card {
+    background-color: var(--highlight-color);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item-card:hover {
+    border-color: var(--header-color);
+    transform: scale(1.02);
+}
+
+.item-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.item-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.item-category {
+    font-size: 0.85rem;
+    color: var(--header-color);
+    font-style: italic;
+}
+
+#item-search {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 600px) {
+    .build-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #saved-builds-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .weapon-slots,
+    .armor-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .talisman-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-display {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .item-display img {
+        align-self: flex-start;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 900px) {
+    #saved-builds-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .talisman-slots {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+    .item-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

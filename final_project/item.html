@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore and search all Elden Ring items with detailed stats">
+    <meta name="author" content="Matthew Porter">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Elden Builds - Item Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Browse and search all Elden Ring items with detailed stats, requirements, and effects.">
+    <meta property="og:image" content="images/elden.webp">
+    <meta property="og:url" content="https://maporter16.github.io/wdd231/final_project/item.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/elden.css" rel="stylesheet">
+    <link href="styles/item.css" rel="stylesheet">
+    <script src="scripts/item.js" type="module" defer></script>
+
+    <title>Item Explorer - Elden Builds</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/elden.webp" alt="site logo" width="800" height="800" loading="lazy">
+        <span>Elden Builds</span>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create.html">Create Build</a></li>
+            <li class="current"><a href="item.html">Item Stats</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Item Explorer</h1>
+        <p class="page-description">Browse and search all items in Elden Ring. View detailed stats, requirements, and
+            effects.</p>
+
+        <!-- Search and Filter Controls -->
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search by item name..." />
+            </div>
+
+            <div class="filter-container">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter">
+                    <option value="weapons">Weapons</option>
+                    <option value="armors">Armor</option>
+                    <option value="shields">Shields</option>
+                    <option value="talismans">Talismans</option>
+                    <option value="sorceries">Sorceries</option>
+                    <option value="incantations">Incantations</option>
+                    <option value="items">Items</option>
+                </select>
+            </div>
+
+            <button id="load-items" class="btn-primary">Load Items</button>
+        </div>
+
+        <!-- Items Display Grid -->
+        <div id="items-container" class="items-grid">
+            <p class="info-message">Select a category and click "Load Items" to begin exploring.</p>
+        </div>
+
+        <!-- Item Detail Modal -->
+        <dialog id="item-detail-modal">
+            <div class="modal-header">
+                <h2 id="modal-item-name">Item Details</h2>
+                <button id="close-detail-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="item-detail-content">
+                <!-- Item details will be populated here -->
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Elden Builds</p>
+                <p>📧 info: EldenBuilds@gmail.com</p>
+                <p>📞 (786)-087-9934</p>
+                <p>📍 450 Main Street, Limgrave, LB 7892</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Matthew Porter</p>
+                <p>WDD 231 - Web Frontend Development</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
