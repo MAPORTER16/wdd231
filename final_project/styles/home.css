@@ -1,0 +1,206 @@
+/* Home Page Specific Styles */
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+}
+
+/* About Section */
+.about {
+    background-color: var(--highlight-color);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+    margin-bottom: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature {
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--highlight-color);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: var(--header-color);
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Get Started Section */
+.get-started {
+    text-align: center;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.cta-buttons a {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Info Section */
+.info {
+    background-color: var(--highlight-color);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.info ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+.info li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.info strong {
+    color: var(--header-color);
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--highlight-color);
+}
+
+.contact-form-section h2 {
+    text-align: center;
+}
+
+.contact-form-section>p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+}
+
+.required {
+    color: var(--error-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--header-color);
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+#contact-form button[type="submit"] {
+    width: 100%;
+}
+
+/* Custom Button Styles */
+.primary-button,
+.secondary-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.primary-button {
+    background-color: var(--header-color);
+    color: var(--background-color);
+}
+
+.primary-button:hover {
+    background-color: var(--text-color);
+    transform: scale(1.05);
+}
+
+.secondary-button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border: 2px solid var(--header-color);
+}
+
+.secondary-button:hover {
+    background-color: var(--header-color);
+    color: var(--background-color);
+    transform: scale(1.05);
+}
