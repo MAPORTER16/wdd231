@@ -17,7 +17,7 @@
     margin-bottom: 2rem;
 }
 
-.search-container {
+.search-wrapper {
     flex: 1;
 }
 
@@ -25,13 +25,13 @@
     width: 100%;
 }
 
-.filter-container {
+.filter-wrapper {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.filter-container label {
+.filter-wrapper label {
     font-family: "Cinzel", serif;
     font-weight: 600;
     color: var(--header-color);

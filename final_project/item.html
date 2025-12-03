@@ -53,11 +53,11 @@
 
         <!-- Search and Filter Controls -->
         <div class="controls">
-            <div class="search-container">
+            <div class="search-wrapper">
                 <input type="text" id="search-input" placeholder="Search by item name..." />
             </div>
 
-            <div class="filter-container">
+            <div class="filter-wrapper">
                 <label for="category-filter">Category:</label>
                 <select id="category-filter">
                     <option value="weapons">Weapons</option>
@@ -82,7 +82,7 @@
         <dialog id="item-detail-modal">
             <div class="detail-header">
                 <h2 id="modal-item-name">Item Details</h2>
-                <button id="close-detail-modal" class="close-btn">&times;</button>
+                <button id="close-detail-modal" class="modal-close">&times;</button>
             </div>
             <div class="detail-content" id="item-detail-content">
                 <!-- Item details will be populated here -->
@@ -91,7 +91,7 @@
     </main>
 
     <footer>
-        <div class="footer-container">
+        <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Information</h3>
                 <p>Elden Builds</p>
