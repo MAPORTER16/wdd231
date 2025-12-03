@@ -178,9 +178,9 @@ p {
 
 /* Buttons */
 button,
-.btn-primary,
-.btn-secondary,
-.btn-danger {
+.action-button,
+.secondary-action-button,
+.danger-button {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
@@ -193,32 +193,32 @@ button,
     text-align: center;
 }
 
-.btn-primary {
+.action-button {
     background-color: var(--header-color);
     color: var(--background-color);
 }
 
-.btn-primary:hover {
+.action-button:hover {
     background-color: var(--text-color);
     transform: scale(1.05);
 }
 
-.btn-secondary {
+.secondary-action-button {
     background-color: var(--highlight-color);
     color: var(--text-color);
 }
 
-.btn-secondary:hover {
+.secondary-action-button:hover {
     background-color: var(--accent-color);
     color: var(--header-color);
 }
 
-.btn-danger {
+.danger-button {
     background-color: var(--error-color);
     color: var(--light-text);
 }
 
-.btn-danger:hover {
+.danger-button:hover {
     background-color: #cc0000;
 }
 
@@ -342,7 +342,8 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modal-header {
+.detail-header,
+.selector-header {
     background-color: var(--highlight-color);
     padding: 1rem;
     display: flex;
@@ -351,7 +352,8 @@ dialog::backdrop {
     border-bottom: 2px solid var(--header-color);
 }
 
-.modal-header h2 {
+.detail-header h2,
+.selector-header h2 {
     margin: 0;
     font-size: 1.5rem;
 }
@@ -371,7 +373,8 @@ dialog::backdrop {
     color: var(--text-color);
 }
 
-.modal-body {
+.detail-content,
+.selector-content {
     padding: 1.5rem;
     overflow-y: auto;
     max-height: calc(80vh - 80px);

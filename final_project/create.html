@@ -51,9 +51,9 @@
 
         <div class="build-controls">
             <input type="text" id="build-name" placeholder="Build Name (e.g., Strength Faith Paladin)">
-            <button id="save-build" class="btn-primary">Save Build</button>
-            <button id="load-build" class="btn-secondary">Load Build</button>
-            <button id="clear-build" class="btn-danger">Clear Build</button>
+            <button id="save-build" class="action-button">Save Build</button>
+            <button id="load-build" class="secondary-action-button">Load Build</button>
+            <button id="clear-build" class="danger-button">Clear Build</button>
         </div>
 
         <div class="saved-builds">
@@ -167,11 +167,11 @@
 
         <!-- Item Selection Modal -->
         <dialog id="item-selector">
-            <div class="modal-header">
-                <h2>Select Item</h2>
+            <div class="selector-header">
+                <h2>Select an Item</h2>
                 <button id="close-modal" class="close-btn">&times;</button>
             </div>
-            <div class="modal-body">
+            <div class="selector-content">
                 <input type="text" id="item-search" placeholder="Search items...">
                 <div id="item-list" class="item-grid"></div>
             </div>
